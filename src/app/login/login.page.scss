@@ -1,0 +1,60 @@
+.logo {
+    display: block;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: -10px;
+    margin-right: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.input {
+    font-size: 20px;
+    max-width: 400px; /* Define um tamanho máximo para os inputs */
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: lightgray;
+    font-family: Kanit, sans-serif;
+    color: black;
+    text-indent: 10px; /* Adicione um espaço entre os campos */
+}
+
+.background {
+    --background: #68CA58;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Garante que o conteúdo ocupa toda a altura da tela */
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Define um tamanho máximo para o formulário */
+    padding: 20px;
+}
+
+.submit-button {
+    width: 100%;
+    height: 60px;
+    max-width: 400px; /* Define um tamanho máximo para o botão */
+    border-radius: 10px;
+    font-family: Kanit, sans-serif;
+    --background: #488F54; /* Define a cor de fundo do botão */
+    color: black;
+    font-size: 24px;
+}
+
+.forgot-password {
+    font-family: Kanit, sans-serif;
+    color: #145EA1; /* Usar a variável de cor primária */
+    text-decoration: underline;
+    font-size: 18px; /* Ajustar o tamanho do texto */
+    text-align: left;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

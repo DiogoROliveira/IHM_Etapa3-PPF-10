@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="ion-padding background">
+  <img src="../../assets/resources/logo.png" class="logo">
+  <form (submit)="login()">
+    <ion-input label="Email" label-placement="floating" placeholder="Enter email" required [(ngModel)]="email" name="email" class="input"></ion-input>
+    <br />
+    <br />
+    <ion-input label="Password" label-placement="floating" placeholder="Enter password" type="password" required [(ngModel)]="password" name="password" class="input"></ion-input>
+      
+    <ion-text class="forgot-password">
+      Forgot password
+    </ion-text>
+
+    <br />
+    <br />
+    <ion-button type="submit" class="submit-button">Login</ion-button>
+    <ion-text class="forgot-password" routerLink="/register">
+      Don't have an account?
+    </ion-text>
+  </form>
+</ion-content>
+
