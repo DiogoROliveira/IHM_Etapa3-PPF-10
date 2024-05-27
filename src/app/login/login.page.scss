@@ -10,13 +10,13 @@
 
 .input {
     font-size: 20px;
-    max-width: 400px; /* Define um tamanho máximo para os inputs */
+    max-width: 400px; 
     border-radius: 15px;
     border: 2px solid black;
     background-color: lightgray;
     font-family: Kanit, sans-serif;
     color: black;
-    text-indent: 10px; /* Adicione um espaço entre os campos */
+    text-indent: 10px; 
 }
 
 .background {
@@ -25,31 +25,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Garante que o conteúdo ocupa toda a altura da tela */
+    height: 100vh; 
 }
 
 form {
     width: 100%;
-    max-width: 400px; /* Define um tamanho máximo para o formulário */
+    max-width: 400px; 
     padding: 20px;
 }
 
 .submit-button {
     width: 100%;
     height: 60px;
-    max-width: 400px; /* Define um tamanho máximo para o botão */
+    max-width: 400px; 
     border-radius: 10px;
     font-family: Kanit, sans-serif;
-    --background: #488F54; /* Define a cor de fundo do botão */
+    --background: #488F54; 
     color: black;
     font-size: 24px;
 }
 
 .forgot-password {
     font-family: Kanit, sans-serif;
-    color: #145EA1; /* Usar a variável de cor primária */
+    color: #145EA1;
     text-decoration: underline;
-    font-size: 18px; /* Ajustar o tamanho do texto */
+    font-size: 18px; 
     text-align: left;
 }
 
@@ -57,4 +57,10 @@ form {
     font-size: 24px;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.show-password {
+    margin-right: 10px;
+    vertical-align: middle;
+    color: black;
 }
