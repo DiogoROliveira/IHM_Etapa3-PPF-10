@@ -1,0 +1,47 @@
+.recipe-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.recipe-image {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  border-width: 3px;
+  border-color: gray;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+.recipe-title {
+  font-size: 24px;
+  font-family: Kanit, sans-serif;
+  color: gray;
+  flex: 1; /* Faz com que o texto ocupe o espaço restante */
+}
+
+.arrow-icon {
+  font-size: 24px;
+  color: gray;
+}
+
+ion-item {
+  --border-width: 0; /* Remove todas as bordas */
+  border-bottom: 1px solid #c8c7cc; /* Adiciona borda inferior */
+}
+
+ion-list {
+  --ion-item-background: transparent; /* Torna o fundo dos itens transparente */
+  --ion-item-border-color: transparent; /* Remove cor da borda dos itens */
+}
+  
+.header-text {
+  font-size: 24px;
+  font-family: Kanit, sans-serif;
+  color: gray;
+}
+
+.header {
+  --background: white;
+}

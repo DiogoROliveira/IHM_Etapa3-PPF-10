@@ -7,7 +7,17 @@
   <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
     <ion-input label="Name" placeholder="Enter name" label-placement="floating" formControlName="name" required class="input"></ion-input>
     <ion-input label="Email" placeholder="Enter email" label-placement="floating" required formControlName="email" type="email" class="input"></ion-input>
-    <ion-input label="Phone Number" label-placement="floating" placeholder="Enter phone number" formControlName="phone" required class="input"></ion-input>
+    <ion-input 
+    label="Phone Number" 
+    [value]="inputModel"
+    (ionInput)="onInput($event)" 
+    #ionInputEl 
+    label-placement="floating" 
+    placeholder="Enter phone number" 
+    formControlName="phone" 
+    required 
+    class="input">
+  </ion-input>
     <ion-input label="Password" placeholder="Enter password" label-placement="floating" required formControlName="password" type="password" class="input"></ion-input>
     <ion-input label="Confirm Password" placeholder="Confirm password" label-placement="floating" required formControlName="confirmPassword" type="password" class="input"></ion-input>
     

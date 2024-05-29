@@ -46,6 +46,8 @@ export class LoginPage {
 
       if (user && user.password === this.password) {
         
+        await this._storage?.set('currentUserEmail', this.email);
+
         this.router.navigate(['/home']);
       } else {
         

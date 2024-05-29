@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true" class="ion-padding background">
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/home" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <div *ngIf="dish" class="dish-container">
+    <img [src]="'../../assets/resources/dishes/' + dish.id + '.png'" alt="{{ dish.title }}" class="dish-image">
+    <ion-text class="dish-title">
+      <p>{{ dish.title }}</p>
+    </ion-text>
+    <ion-text class="dish-description">
+      <p>{{ dish.description }}</p>
+    </ion-text>
+    <!-- Adicione outros detalhes do prato aqui, como ingredientes, modo de preparo, etc. -->
+  </div>
+</ion-content>

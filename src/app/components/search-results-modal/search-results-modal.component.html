@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title class="header-text">Search Results</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list>
+    <ion-item *ngFor="let result of searchResults" (click)="openDishPage(result.id)">
+      <div class="recipe-container">
+        <img [src]="'../../assets/resources/dishes/' + result.id + '.png'" alt="{{ result.title }}" class="recipe-image">
+        <ion-text class="recipe-title">
+          <p>{{ result.title }}</p>
+        </ion-text>
+        <ion-icon name="chevron-forward-outline" slot="end" class="arrow-icon"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

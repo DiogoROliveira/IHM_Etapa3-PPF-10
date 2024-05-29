@@ -25,3 +25,71 @@
 #container a {
   text-decoration: none;
 }
+
+.header-text {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: black;
+  font-family: Kanit, sans-serif;
+}
+
+.logo {
+  transform: translateX(80%);
+  width: auto; 
+  height: 100px; 
+  margin-bottom:10px;
+  margin-top: 10px;
+}
+
+.searchbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  --background: lightgray;
+  --color: gray;
+}
+
+.recipe-title {
+  font-size: 20px;
+  font-family: Kanit, sans-serif;
+  color: gray;
+}
+
+.recipe-image {
+  width: 125px;
+  height: 125px;
+  border-width: 3px;
+  border-color: gray;
+  border-style: solid;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.recipe-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow-icon {
+  font-size: 24px;
+  color: gray;
+}
+
+ion-item {
+  --border-width: 0; /* Remove todas as bordas */
+  border-bottom: 1px solid #c8c7cc; /* Adiciona borda inferior */
+}
+
+ion-list {
+  --ion-item-background: transparent; /* Torna o fundo dos itens transparente */
+  --ion-item-border-color: transparent; /* Remove cor da borda dos itens */
+}
+
+ion-item-background {
+  --background: transparent; /* Torna o fundo dos itens transparente */
+}

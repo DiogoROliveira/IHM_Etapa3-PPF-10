@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin: 0;
+    margin-right: 130px;
+    width: auto; 
+    height: 100px; 
+    margin-bottom:100px;
+    margin-top: 50px;
+}
+
+.back-button {
+    color: black;
+    margin-right: 70px;
+    width: 40px; 
+    height: 40px; 
+}
+
+.dish-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dish-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 3px solid gray;
+  }
+  
+  .dish-title {
+    font-size: 24px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .dish-description {
+    font-size: 18px;
+    color: #666;
+    margin: 0 20px;
+  }
