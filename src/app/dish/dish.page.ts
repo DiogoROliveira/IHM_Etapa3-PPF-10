@@ -6,6 +6,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { SupabaseService } from '../services/supabase.service';
 import { Review } from '../services/review';
+import { CartService } from '../services/cart.service';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-dish',
@@ -22,15 +24,16 @@ export class DishPage implements OnInit {
   reviews: any[] = [];
   isModalOpen = false;
   isReviewModalOpen: boolean = false;
-  currentUser: any;
+  currentUser: string = '';
 
   constructor(
     private route: ActivatedRoute,
+    private storage: Storage,
     private dishService: DishService,
-    private authService: AuthService,
     private formBuilder: FormBuilder,
     private alertController: AlertController,
     private supabase: SupabaseService,
+    private cartService: CartService,
     private router: Router
   ) {
     this.reviewForm = this.formBuilder.group({
@@ -43,8 +46,6 @@ export class DishPage implements OnInit {
 
     try {
       await this.supabase.signIn('diogo.rosas.oliveira@ipvc.pt', 'projetofinalIHM2024.'); // Autentique o usuário
-      const reviews = await this.supabase.getReviews();
-      console.log('Reviews:', reviews);
     } catch (error) {
       console.error('Erro durante a autenticação:', error);
     }
@@ -53,13 +54,21 @@ export class DishPage implements OnInit {
     if (dishId) {
       this.loadDishDetails(dishId);
       this.loadReviews(dishId);
-      this.loadCurrentUser();
+      await this.storage.create();
+      const email = await this.storage.get('currentUserEmail');
+      if (email) {
+        const userData = await this.storage.get(email);
+      if (userData && userData.name) {
+        this.currentUser = userData.name.split(' ')[0];
+      } else {
+        this.currentUser = 'Guest';
+      }
+    } else {
+      this.currentUser = 'Guest';
+    } 
     }
   }
 
-  async loadCurrentUser() {
-    this.currentUser = await this.authService.getCurrentUser();
-  }
 
   loadDishDetails(id: string) {
     this.dishService.getDishById(id).subscribe(
@@ -105,15 +114,15 @@ export class DishPage implements OnInit {
   }
 
   addToCart() {
-    const cartItem = {
+        const cartItem = {
       dish: this.dish,
       size: this.selectedSize,
       customizations: this.customizations,
       quantity: this.quantity,
       totalPrice: this.dish.price * this.quantity
     };
-    console.log('Item added to cart:', cartItem);
-    // Adicione lógica para adicionar o item ao carrinho de compras
+    this.cartService.addToCart(cartItem);
+    this.router.navigate(['/cart']);
   }
 
   calculateAverageRating() {
@@ -126,13 +135,9 @@ export class DishPage implements OnInit {
   }
 
   async submitReview() {
-    if (!this.currentUser) {
-      console.error('Usuário não está logado');
-      return;
-    }
     const newReview: Review = {
       dishId: this.dish.id,
-      username: this.currentUser.name,
+      username: this.currentUser,
       rating: this.reviewForm.value.rating,
       comment: this.reviewForm.value.comment,
       date: new Date().toISOString()
@@ -172,7 +177,4 @@ export class DishPage implements OnInit {
   }
 
 }
-
-
-
 

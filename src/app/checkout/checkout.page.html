@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background ion-padding">
+  <form (ngSubmit)="submitAddress()" [formGroup]="addressForm">
+    <ion-item>
+      <ion-label position="floating">Street</ion-label>
+      <ion-input formControlName="street"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input formControlName="city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Postal Code</ion-label>
+      <ion-input formControlName="postalCode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Country</ion-label>
+      <ion-input formControlName="country"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="full" [disabled]="!addressForm.valid">Proceed to Payment</ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" (click)="openPaymentModal($event)" [disabled]="!addressForm.valid">Proceed to Payment</ion-button>
+  </ion-toolbar>
+</ion-footer>
+
+
+

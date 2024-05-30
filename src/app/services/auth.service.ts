@@ -1,21 +1,22 @@
-import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage-angular';
+import { Injectable } from "@angular/core";
+import { SupabaseService } from "./supabase.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private currentUserEmailKey = 'currentUserEmail';
-
-  constructor(private storage: Storage) {
-    this.storage.create();
-  }
+  constructor(private supabase: SupabaseService) {}
 
   async getCurrentUser() {
-    const email = await this.storage.get(this.currentUserEmailKey);
-    if (email) {
-      return await this.storage.get(email);
+    try {
+      const user = await this.supabase.getCurrentUser();
+      if (!user) {
+        throw new Error('Usuário não autenticado');
+      }
+      return user;
+    } catch (error) {
+      console.error('Erro ao obter usuário atual:', error);
+      return null;
     }
-    return null;
   }
 }

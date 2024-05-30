@@ -1,0 +1,134 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: auto;
+    height: 100px;
+    transform: translateX(-20px);
+  }
+  
+  .back-button {
+    transform: translateX(-100px);
+    color: black;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .header-text {
+    font-size: 30px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    transform: translate(18px, 20px);
+  }
+  
+  .cart-item {
+    --background: white;
+    background-color: white;
+    background: white;
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-text {
+    font-size: 18px;
+    text-decoration: underline;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: left;
+    transform: translate(75%, -38px);
+  }
+  
+  .empty-cart {
+    font-size: 18px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .points-earned {
+    font-size: 20px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: left;
+  }
+  
+  .points {
+    font-size: 20px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: right;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: right;
+  }
+  
+  .total-price {
+    font-size: 20px;
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: left;
+  }
+  
+  .price.total {
+    font-weight: bold;
+  }
+  
+  .cart-dish {
+    font-family: Kanit, sans-serif;
+    color: gray;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .checkout-button {
+    transform: translate(75%, 90%);
+    --background: gray;
+    --color: white;
+    width: 40%;
+    height: 40px;
+    font-family: Kanit, sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background: gray;
+    margin: 10px 0;
+  }
+  
+  .remove-icon {
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  

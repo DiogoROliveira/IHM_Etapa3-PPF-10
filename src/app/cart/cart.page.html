@@ -1,0 +1,92 @@
+<ion-content [fullscreen]="true" class="background ion-padding">
+
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/home" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <div class="cart-container">
+    <h1 class="header-text">Cart</h1>
+    <hr>
+
+    <ion-text *ngIf="cartItems.length === 0" class="empty-cart">
+      Empty cart!
+    </ion-text>
+
+    <ion-text *ngIf="cartItems.length > 0" class="cart-text" (click)="clearCart()">
+      Clear Items
+    </ion-text>
+
+    <ion-list class="background" *ngIf="cartItems.length > 0">
+      <ion-item *ngFor="let item of cartItems; let i = index" class="cart-item">
+        <ion-label class="cart-dish">
+          <h2>{{ item.dish.title }} ({{ item.size }})</h2>
+          <p>Quantity: {{ item.quantity }}</p>
+          <p>Customizations: {{ item.customizations }}</p>
+          <p>Price: {{ item.totalPrice | currency:'EUR' }}</p>
+        </ion-label>
+        <ion-icon name="close-circle-outline" slot="end" class="remove-icon" (click)="confirmRemoveItem(i)"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="cartItems.length > 0" class="price-row">
+      <ion-label class="points-earned">
+        Points earned:
+      </ion-label>
+      <ion-note class="points">{{ calculatePoints(getTotalPrice()) }}</ion-note>
+    </div>
+
+    <hr *ngIf="cartItems.length > 0">
+
+    <div *ngIf="cartItems.length > 0" class="price-row">
+      <ion-label class="total-price">
+        <h2>Delivery Fee</h2>
+      </ion-label>
+      <ion-note class="price">{{ getDeliveryFee() | currency:'EUR' }}</ion-note>
+    </div>
+
+    <div *ngIf="cartItems.length > 0" class="price-row">
+      <ion-label class="total-price">
+        <h2>Subtotal</h2>
+      </ion-label>
+      <ion-note class="price">{{ getSubtotalPrice() | currency:'EUR' }}</ion-note>
+    </div>
+
+    <div *ngIf="cartItems.length > 0" class="price-row">
+      <ion-label class="total-price">
+        <h2>Total Price</h2>
+      </ion-label>
+      <ion-note class="price total">{{ getTotalPrice() | currency:'EUR' }}</ion-note>
+    </div>
+
+    <ion-button *ngIf="cartItems.length > 0" (click)="checkout()" class="checkout-button">Checkout</ion-button>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" class="background">
+        <ion-tab-button [routerLink]="['/home']">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/profile']">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="tab4">
+          <ion-icon name="search-outline"></ion-icon>
+          <ion-label>Search</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="cart"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+
+

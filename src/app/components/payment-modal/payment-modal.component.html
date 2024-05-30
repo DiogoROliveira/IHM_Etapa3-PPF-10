@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Payment Method</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedPaymentMethod">
+      <ion-item>
+        <ion-label>Credit Card</ion-label>
+        <ion-radio slot="start" value="credit_card"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>PayPal</ion-label>
+        <ion-radio slot="start" value="paypal"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button expand="full" (click)="confirmPayment()">Confirm Payment</ion-button>
+</ion-content>
