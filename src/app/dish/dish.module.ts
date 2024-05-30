@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { DishPageRoutingModule } from './dish-routing.module';
-
 import { DishPage } from './dish.page';
 
 @NgModule({
@@ -13,8 +10,10 @@ import { DishPage } from './dish.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    DishPageRoutingModule
+    DishPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [DishPage]
 })
 export class DishPageModule {}
+

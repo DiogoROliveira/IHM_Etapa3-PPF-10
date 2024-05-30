@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DishService } from '../services/dish.service';
+import { AuthService } from '../services/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
+import { SupabaseService } from '../services/supabase.service';
+import { Review } from '../services/review';
 
 @Component({
   selector: 'app-dish',
@@ -9,29 +14,56 @@ import { DishService } from '../services/dish.service';
 })
 export class DishPage implements OnInit {
   dish: any;
+  selectedSize: string = 'medium';
+  customizations: string = '';
+  quantity: number = 1;
+  averageRating: number = 0;
+  reviewForm!: FormGroup;
+  reviews: any[] = [];
+  isModalOpen = false;
+  isReviewModalOpen: boolean = false;
+  currentUser: any;
 
   constructor(
     private route: ActivatedRoute,
-    private dishService: DishService
-  ) { }
-
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      const dishId = params['id'];
-      if (dishId) {
-        this.loadDishDetails(dishId);
-      }
-    });
+    private dishService: DishService,
+    private authService: AuthService,
+    private formBuilder: FormBuilder,
+    private alertController: AlertController,
+    private supabase: SupabaseService,
+    private router: Router
+  ) {
+    this.reviewForm = this.formBuilder.group({
+      rating: ['', Validators.required],
+      comment: ['', Validators.required]
+    });    
   }
-  
+
+  async ngOnInit() {
+
+    try {
+      await this.supabase.signIn('diogo.rosas.oliveira@ipvc.pt', 'projetofinalIHM2024.'); // Autentique o usuário
+      const reviews = await this.supabase.getReviews();
+      console.log('Reviews:', reviews);
+    } catch (error) {
+      console.error('Erro durante a autenticação:', error);
+    }
+
+    const dishId = this.route.snapshot.paramMap.get('id');
+    if (dishId) {
+      this.loadDishDetails(dishId);
+      this.loadReviews(dishId);
+      this.loadCurrentUser();
+    }
+  }
+
+  async loadCurrentUser() {
+    this.currentUser = await this.authService.getCurrentUser();
+  }
 
   loadDishDetails(id: string) {
-    // Converta o ID para string
-    id = String(id);
-  
     this.dishService.getDishById(id).subscribe(
       (data: any) => {
-        console.log(data); // Verifique os dados do prato no console
         this.dish = data;
       },
       (error: any) => {
@@ -39,6 +71,108 @@ export class DishPage implements OnInit {
       }
     );
   }
-  
-  
+
+  async loadReviews(dishId: string) {
+    try {
+      const reviews = await this.supabase.getReviewsByDishId(dishId);
+      this.reviews = reviews;
+      this.calculateAverageRating();
+    } catch (error) {
+      console.error('Erro ao carregar avaliações:', error);
+    }
+  }
+
+  increaseQuantity() {
+    this.quantity++;
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
+  viewIngredient(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
+  openReviewModal() {
+    this.isReviewModalOpen = true;
+  }
+
+  closeReviewModal() {
+    this.isReviewModalOpen = false;
+  }
+
+  addToCart() {
+    const cartItem = {
+      dish: this.dish,
+      size: this.selectedSize,
+      customizations: this.customizations,
+      quantity: this.quantity,
+      totalPrice: this.dish.price * this.quantity
+    };
+    console.log('Item added to cart:', cartItem);
+    // Adicione lógica para adicionar o item ao carrinho de compras
+  }
+
+  calculateAverageRating() {
+    if (this.reviews.length === 0) {
+      this.averageRating = 0;
+      return;
+    }
+    const sum = this.reviews.reduce((acc, review) => acc + review.rating, 0);
+    this.averageRating = sum / this.reviews.length;
+  }
+
+  async submitReview() {
+    if (!this.currentUser) {
+      console.error('Usuário não está logado');
+      return;
+    }
+    const newReview: Review = {
+      dishId: this.dish.id,
+      username: this.currentUser.name,
+      rating: this.reviewForm.value.rating,
+      comment: this.reviewForm.value.comment,
+      date: new Date().toISOString()
+    };
+    this.reviews.push(newReview);
+    this.calculateAverageRating();
+    this.reviewForm.reset();
+    try {
+      await this.supabase.insertReview(newReview);
+      this.closeReviewModal();
+    } catch (error) {
+      console.error('Erro ao salvar avaliação:', error);
+    }
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Review Submitted',
+      message: 'Thank you for your review!',
+      buttons: [
+        {
+          text: 'Back to Home',
+          handler: () => {
+            this.router.navigate(['/home']);
+          }
+        },
+        {
+          text: 'Back to Dish Page',
+          handler: () => {
+            // Nothing needed, just close the alert
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
 }
+
+
+
+

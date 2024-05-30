@@ -1,0 +1,37 @@
+[
+    {
+      "dishId": "0",
+      "reviews": [
+        {
+          "username": "John Doe",
+          "rating": 4,
+          "comment": "Delicious dish, very colorful and tasty!",
+          "date": "2024-05-20T14:48:00.000Z"
+        },
+        {
+          "username": "Jane Smith",
+          "rating": 5,
+          "comment": "Absolutely loved it! Will order again.",
+          "date": "2024-05-21T12:34:00.000Z"
+        }
+      ]
+    },
+    {
+      "dishId": "1",
+      "reviews": [
+        {
+          "username": "Alice Johnson",
+          "rating": 3,
+          "comment": "It was okay, but could use more seasoning.",
+          "date": "2024-05-22T10:22:00.000Z"
+        },
+        {
+          "username": "Bob Brown",
+          "rating": 4,
+          "comment": "Tasty and healthy, will definitely try again.",
+          "date": "2024-05-23T09:15:00.000Z"
+        }
+      ]
+    }
+  ]
+  
