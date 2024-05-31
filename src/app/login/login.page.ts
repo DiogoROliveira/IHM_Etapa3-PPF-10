@@ -47,13 +47,18 @@ export class LoginPage {
       if (user && user.password === this.password) {
         
         await this._storage?.set('currentUserEmail', this.email);
-
+        this.clearInput();
         this.router.navigate(['/home']);
       } else {
         
         this.showAlert('Invalid Credentials', 'The email or password you entered is incorrect.');
       }
     }, 1500); 
+  }
+
+  clearInput() {
+    this.email = '';
+    this.password = '';
   }
 
   async showAlert(header: string, message: string) {
