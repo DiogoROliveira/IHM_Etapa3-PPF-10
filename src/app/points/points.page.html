@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="background ion-padding">
+
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/profile" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <h1 class="header-text">Your Points: {{ points }}</h1>
+
+  <hr class="divider">
+
+  <h1 class="header-text">Offers</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let dish of dishes">
+      <ion-thumbnail slot="start" class="dish-image" (click)="openDishPage(dish.id)">
+        <img [src]="'../../assets/resources/dishes/' + dish.id + '.png'">
+      </ion-thumbnail>
+      <ion-label (click)="openDishPage(dish.id)">
+        <h2 class="dish-name">{{ dish.title }}</h2>
+        <p class="points">{{ dish.points }} Points</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" class="background">
+        <ion-tab-button>
+          <ion-icon name="star"></ion-icon>
+          <ion-label>Points</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/points-cart']">
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

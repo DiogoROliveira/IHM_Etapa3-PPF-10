@@ -1,7 +1,4 @@
-
-
 <ion-content [fullscreen]="true" class="background ion-padding">
-  
   <div class="header">
     <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
   </div>
@@ -12,9 +9,32 @@
     <h2 class="sign-out-text" (click)="signOut()">Sign Out</h2>
   </div>
 
+  <div class="options">
+    <ion-list class="clear-background">
+      <ion-item (click)="goToPoints()">
+        <ion-label class="profile-option">Points</ion-label>
+        <ion-icon slot="start" name="star"></ion-icon>
+      </ion-item>
+
+      <ion-item (click)="goToInvite()">
+        <ion-label class="profile-option">Invite Friends</ion-label>
+        <ion-icon slot="start" name="people"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="profile-option">Order History</ion-label>
+        <ion-icon slot="start" name="bag-handle"></ion-icon>
+      </ion-item>
+
+      <ion-item (click)="goToFAQ()">
+        <ion-label class="profile-option">FAQs</ion-label>
+        <ion-icon slot="start" name="help-circle"></ion-icon>
+      </ion-item>
+
+    </ion-list>
+  </div>
   
 </ion-content>
-
 
 <ion-footer>
   <ion-toolbar>
@@ -27,10 +47,6 @@
         <ion-tab-button>
           <ion-icon name="person"></ion-icon>
           <ion-label>Profile</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="tab4">
-          <ion-icon name="search-outline"></ion-icon>
-          <ion-label>Search</ion-label>
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/cart']">
           <ion-icon name="cart-outline"></ion-icon>

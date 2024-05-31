@@ -19,13 +19,8 @@ export class CartService {
   async ngOnInit() {
     await this.storage.create();
     const email = await this.storage.get('currentUserEmail');
-    if (email) {
-      const userData = await this.storage.get(email);
-      if (userData && userData.name) {
-        this.currentUser = userData.name.split(' ')[0];
-      } else {
-        this.currentUser = 'Guest';
-      }
+    if(email) {
+      this.currentUser = email;  
     } else {
       this.currentUser = 'Guest';
     }
@@ -60,6 +55,10 @@ export class CartService {
 
   getTotalPrice(cartItems: any[]): number {
     return cartItems.reduce((total, item) => total + item.totalPrice, 0);
+  }
+
+  getTotalPoints(items: any[]): number {
+    return items.reduce((total, item) => total + item.points, 0);
   }
 
   clearCart() {

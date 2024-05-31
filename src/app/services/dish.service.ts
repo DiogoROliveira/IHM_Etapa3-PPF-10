@@ -19,5 +19,4 @@ export class DishService {
       map((recipes: any[]) => recipes.find(recipe => recipe.id.toString() === id))
     );
   }
-  
 }

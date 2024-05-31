@@ -1,0 +1,70 @@
+<ion-content [fullscreen]="true" class="background ion-padding">
+
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/points" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <div class="cart-container">
+    <h1 class="header-text">Cart</h1>
+    <hr>
+
+    <ion-text *ngIf="cartItems.length === 0" class="empty-cart">
+      Empty cart!
+    </ion-text>
+
+    <ion-text *ngIf="cartItems.length > 0" class="cart-text" (click)="clearCart()">
+      Clear Items
+    </ion-text>
+
+    <ion-list class="background" *ngIf="cartItems.length > 0">
+      <ion-item *ngFor="let item of cartItems; let i = index" class="cart-item">
+        <ion-label class="cart-dish">
+          <h2>{{ item.dish.title }} ({{ item.size }})</h2>
+          <p>Quantity: {{ item.quantity }}</p>
+          <p>Customizations: {{ item.customizations }}</p>
+          <p>Points: {{ item.points }}</p>
+        </ion-label>
+        <ion-icon name="close-circle-outline" slot="end" class="remove-icon" (click)="confirmRemoveItem(i)"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <hr *ngIf="cartItems.length > 0">
+
+    <div *ngIf="cartItems.length > 0" class="price-row">
+      <ion-label class="total-price">
+        <h2>Total Points</h2>
+      </ion-label>
+      <ion-note class="price total">{{ getTotalPoints() }}</ion-note>
+    </div>
+
+    <ion-label *ngIf="cartItems.length > 0" class="points-label">
+      Your Points: {{ userPoints }}
+    </ion-label>
+    
+    <ion-text *ngIf="userPoints < requiredPoints" color="danger" class="insufficient-points">
+      Insufficient points to finish order
+    </ion-text>
+
+    <ion-button *ngIf="cartItems.length > 0" (click)="checkout()" [disabled]="userPoints < requiredPoints" class="checkout-button">Checkout</ion-button>
+  </div>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" class="background">
+        <ion-tab-button [routerLink]="['/points']">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-label>Points</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="cart"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

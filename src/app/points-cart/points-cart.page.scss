@@ -132,7 +132,24 @@
     cursor: pointer;
   }
   
+  .points-label {
+    color: gray;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Kanit, sans-serif;
+    margin-left: 10px;
+  }
+  
+  .insufficient-points {
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: Kanit, sans-serif;
+    align-self: center;
+    transform: translateY(40px);
+  }
+
   ion-item:last-child {
     --border-width: 0;
     --border-color: transparent;
-  }
+}

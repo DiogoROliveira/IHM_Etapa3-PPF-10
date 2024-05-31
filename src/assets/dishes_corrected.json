@@ -1,98 +1,103 @@
 [
-    {
-        "id": 0,
-        "href": "https://veganuary.com/recipes/rainbow-rice/",
-        "title": "Rainbow Rice",
-        "type": "main course",
-        "ingredients": [
-          "Carrot ribbons (just use a peeler for speed)",
-          "Frozen peas",
-          "Red cabbage",
-          "Yellow peppers",
-          "Red onion",
-          "1 tsp miso paste",
-          "1 tsp of Chinese five spice",
-          "2 tbsp of soy sauce",
-          "1 tbsp of oil",
-          "100g white rice"
-        ],
-        "price": 10.99,
-        "description": "A colorful and comforting dish, perfect for a nutritious meal. The rainbow of vegetables mixed with rice and seasoned with miso, five Chinese spices, and soy sauce bursts with flavor at every bite."
-      },
-      {
-        "id": 1,
-        "href": "https://veganuary.com/recipes/mfc-nachos/",
-        "title": "Nachos",
-        "type": "starter",
-        "ingredients": [
-          "400g Meatless Farm Co mince (or similar)",
-          "400g can of refried beans",
-          "400g can of chopped tomatoes",
-          "1 tbsp tomato puree",
-          "½ red bell pepper, diced",
-          "½ green bell pepper, diced",
-          "1 medium onion, chopped",
-          "Taco spice blend",
-          "200g grated vegan cheese",
-          "1 large bag of plain tortilla chips"
-        ],
-        "price": 12.99,
-        "description": "A taste explosion of authentic Mexican flavor at every bite! Our nachos are covered with a delicious mixture of meat-free vegetarian meat, refried beans, diced tomatoes, and vegan cheese melted, all seasoned with the real taste of a taco mix of spices."
-      },
-    {
-        "id": 2,
-        "href": "https://veganuary.com/recipes/hazelnut-truffles/",
-        "title": "Hazelnut Truffles",
-        "type": "dessert",
-        "ingredients": [
-        "100g hazelnuts",
-        "2 tablespoons + 1 tablespoon cacao",
-        "1 tablespoon hemp protein powder (optional)",
-        "3 tablespoons agave",
-        "10 almonds"
-        ],
-        "price": 5.99,
-        "description": "Delicious and rich hazelnut truffles with a cacao coating, perfect for a sweet treat."
+  {
+    "id": 0,
+    "href": "https://veganuary.com/recipes/rainbow-rice/",
+    "title": "Rainbow Rice",
+    "type": "main course",
+    "ingredients": [
+      "Carrot ribbons (just use a peeler for speed)",
+      "Frozen peas",
+      "Red cabbage",
+      "Yellow peppers",
+      "Red onion",
+      "1 tsp miso paste",
+      "1 tsp of Chinese five spice",
+      "2 tbsp of soy sauce",
+      "1 tbsp of oil",
+      "100g white rice"
+    ],
+    "price": 10.99,
+    "description": "A colorful and comforting dish, perfect for a nutritious meal. The rainbow of vegetables mixed with rice and seasoned with miso, five Chinese spices, and soy sauce bursts with flavor at every bite.",
+    "points": 15 
+  },
+  {
+    "id": 1,
+    "href": "https://veganuary.com/recipes/mfc-nachos/",
+    "title": "Nachos",
+    "type": "starter",
+    "ingredients": [
+      "400g Meatless Farm Co mince (or similar)",
+      "400g can of refried beans",
+      "400g can of chopped tomatoes",
+      "1 tbsp tomato puree",
+      "½ red bell pepper, diced",
+      "½ green bell pepper, diced",
+      "1 medium onion, chopped",
+      "Taco spice blend",
+      "200g grated vegan cheese",
+      "1 large bag of plain tortilla chips"
+    ],
+    "price": 12.99,
+    "description": "A taste explosion of authentic Mexican flavor at every bite! Our nachos are covered with a delicious mixture of meat-free vegetarian meat, refried beans, diced tomatoes, and vegan cheese melted, all seasoned with the real taste of a taco mix of spices.",
+    "points": 10 
+  },
+  {
+    "id": 2,
+    "href": "https://veganuary.com/recipes/hazelnut-truffles/",
+    "title": "Hazelnut Truffles",
+    "type": "dessert",
+    "ingredients": [
+      "100g hazelnuts",
+      "2 tablespoons + 1 tablespoon cacao",
+      "1 tablespoon hemp protein powder (optional)",
+      "3 tablespoons agave",
+      "10 almonds"
+    ],
+    "price": 5.99,
+    "description": "Delicious and rich hazelnut truffles with a cacao coating, perfect for a sweet treat.",
+    "points": 18 
+  },
+  {
+    "id": 3,
+    "href": "https://veganuary.com/recipes/simple-roasted-radish-by-chicp/",
+    "title": "Simple Roasted Radish",
+    "type": "starter",
+    "ingredients": [
+      "1 170g tub beetroot and horseradish houmous",
+      "300g mixed radishes",
+      "2 tablespoons light oil",
+      "1 teaspoon salt"
+    ],
+    "price": 4.50,
+    "description": "A delightful starter of roasted radishes served with a beetroot and horseradish houmous.",
+    "points": 12 
+  },
+  {
+    "id": 4,
+    "href": "https://veganuary.com/recipes/baked-apple-charlotte/",
+    "title": "Baked Apple Charlotte",
+    "type": "dessert",
+    "ingredients": [
+      "2 tablespoons rapeseed oil",
+      "75g pitted dates",
+      "450g bramley apples",
+      "110g gluten-free self-raising flour",
+      "125ml dairy-free milk",
+      "1 heaped teaspoon egg replacer whisked together with 2 tablespoons water",
+      "175g soft light brown sugar or coconut sugar",
+      "100g icing sugar",
+      "1-2 tablespoons water"
+    ],
+    "price": 6.50,
+    "description": "A warm and comforting baked apple dessert, perfect for any occasion.",
+    "points": 8 
     },
     {
-        "id": 3,
-        "href": "https://veganuary.com/recipes/simple-roasted-radish-by-chicp/",
-        "title": "Simple Roasted Radish",
-        "type": "starter",
-        "ingredients": [
-        "1 170g tub beetroot and horseradish houmous",
-        "300g mixed radishes",
-        "2 tablespoons light oil",
-        "1 teaspoon salt"
-        ],
-        "price": 4.50,
-        "description": "A delightful starter of roasted radishes served with a beetroot and horseradish houmous."
-    },
-    {
-        "id": 4,
-        "href": "https://veganuary.com/recipes/baked-apple-charlotte/",
-        "title": "Baked Apple Charlotte",
-        "type": "dessert",
-        "ingredients": [
-        "2 tablespoons rapeseed oil",
-        "75g pitted dates",
-        "450g bramley apples",
-        "110g gluten-free self-raising flour",
-        "125ml dairy-free milk",
-        "1 heaped teaspoon egg replacer whisked together with 2 tablespoons water",
-        "175g soft light brown sugar or coconut sugar",
-        "100g icing sugar",
-        "1-2 tablespoons water"
-        ],
-        "price": 6.50,
-        "description": "A warm and comforting baked apple dessert, perfect for any occasion."
-    },
-    {
-        "id": 5,
-        "href": "https://veganuary.com/recipes/chilli-vegetable-pizza/",
-        "title": "Chilli Vegetable Pizza",
-        "type": "main course",
-        "ingredients": [
+      "id": 5,
+      "href": "https://veganuary.com/recipes/chilli-vegetable-pizza/",
+      "title": "Chilli Vegetable Pizza",
+      "type": "main course",
+      "ingredients": [
         "125g ’00’ flour",
         "125g strong wholemeal flour",
         "1/2 teaspoon dried active yeast",
@@ -105,16 +110,17 @@
         "7g ancho poblano chilli, soaked with seeds",
         "1/2 cup water",
         "2 tablespoons balsamic vinegar"
-        ],
-        "price": 8.99,
-        "description": "A spicy and flavorful pizza topped with a variety of vegetables and a rich tomato sauce."
+      ],
+      "price": 8.99,
+      "description": "A spicy and flavorful pizza topped with a variety of vegetables and a rich tomato sauce.",
+      "points": 12
     },
     {
-        "id": 6,
-        "href": "https://veganuary.com/recipes/choc-and-raspberry-porridge/",
-        "title": "Choc and Raspberry Porridge",
-        "type": "breakfast",
-        "ingredients": [
+      "id": 6,
+      "href": "https://veganuary.com/recipes/choc-and-raspberry-porridge/",
+      "title": "Choc and Raspberry Porridge",
+      "type": "breakfast",
+      "ingredients": [
         "50g gluten-free rolled oats",
         "100ml water",
         "100ml vegan milk",
@@ -125,16 +131,17 @@
         "10g pea protein powder",
         "5 chopped hazelnuts",
         "5 chopped raspberries"
-        ],
-        "price": 4.99,
-        "description": "A nutritious and indulgent porridge with dark chocolate and fresh raspberries."
+      ],
+      "price": 4.99,
+      "description": "A nutritious and indulgent porridge with dark chocolate and fresh raspberries.",
+      "points": 9
     },
     {
-        "id": 7,
-        "href": "https://veganuary.com/recipes/nakd-mini-bakewell-tarts/",
-        "title": "Nākd Mini Bakewell Tarts",
-        "type": "dessert",
-        "ingredients": [
+      "id": 7,
+      "href": "https://veganuary.com/recipes/nakd-mini-bakewell-tarts/",
+      "title": "Nākd Mini Bakewell Tarts",
+      "type": "dessert",
+      "ingredients": [
         "150g plain gluten-free flour",
         "75g dairy-free soya spread",
         "2 teaspoons agave nectar or maple syrup",
@@ -145,16 +152,17 @@
         "50g ground almonds",
         "3 Nākd Bakewell Tart Bars",
         "Flaked almonds"
-        ],
-        "price": 6.00,
-        "description": "Mini tarts with a delicate almond flavor and a flaky gluten-free pastry."
+      ],
+      "price": 6.00,
+      "description": "Mini tarts with a delicate almond flavor and a flaky gluten-free pastry.",
+      "points": 8
     },
     {
-        "id": 8,
-        "href": "https://veganuary.com/recipes/vegan-fry-up/",
-        "title": "Vegan Full English Breakfast",
-        "type": "breakfast",
-        "ingredients": [
+      "id": 8,
+      "href": "https://veganuary.com/recipes/vegan-fry-up/",
+      "title": "Vegan Full English Breakfast",
+      "type": "breakfast",
+      "ingredients": [
         "2 slices of bread",
         "1 big tomato",
         "3 mushrooms",
@@ -162,16 +170,17 @@
         "1/2 tin of baked beans",
         "3 veggie sausages",
         "2 hash browns"
-        ],
-        "price": 7.50,
-        "description": "A hearty vegan version of a classic English breakfast."
+      ],
+      "price": 7.50,
+      "description": "A hearty vegan version of a classic English breakfast.",
+      "points": 15
     },
     {
-        "id": 9,
-        "href": "https://veganuary.com/recipes/non-dairy-garlic-herb-gournay/",
-        "title": "Non-Dairy Garlic Herb Gournay",
-        "type": "starter",
-        "ingredients": [
+      "id": 9,
+      "href": "https://veganuary.com/recipes/non-dairy-garlic-herb-gournay/",
+      "title": "Non-Dairy Garlic Herb Gournay",
+      "type": "starter",
+      "ingredients": [
         "1/2 block extra-firm water-packed tofu",
         "3 tablespoons organic refined coconut oil",
         "1 tablespoon fresh lemon juice",
@@ -185,16 +194,17 @@
         "1/2 teaspoon coarse ground black pepper",
         "1/4 teaspoon dried thyme leaves",
         "Plain unsweetened non-dairy milk to adjust consistency"
-        ],
-        "price": 5.99,
-        "description": "A flavorful non-dairy cheese spread with herbs and garlic, perfect for appetizers."
+      ],
+      "price": 5.99,
+      "description": "A flavorful non-dairy cheese spread with herbs and garlic, perfect for appetizers.",
+      "points": 10
     },
     {
-        "id": 10,
-        "href": "https://veganuary.com/recipes/tahini-protein-balls/",
-        "title": "Tahini Protein Balls",
-        "type": "snack",
-        "ingredients": [
+      "id": 10,
+      "href": "https://veganuary.com/recipes/tahini-protein-balls/",
+      "title": "Tahini Protein Balls",
+      "type": "snack",
+      "ingredients": [
         "1 scoop of pea, soya or hemp protein powder",
         "2 tablespoons chia seeds",
         "3 tablespoons cocoa powder or raw cacao",
@@ -202,16 +212,17 @@
         "1-2 tablespoons brown rice syrup",
         "1 tablespoon coconut oil",
         "Puffed quinoa, goji berries or other nuts/seeds for rolling"
-        ],
-        "price": 3.99,
-        "description": "Nutritious and energy-boosting protein balls, perfect for a healthy snack."
+      ],
+      "price": 3.99,
+      "description": "Nutritious and energy-boosting protein balls, perfect for a healthy snack.",
+      "points": 7
     },
     {
-        "id": 11,
-        "href": "https://veganuary.com/recipes/mexican-bean-lasagne/",
-        "title": "Mexican Bean Lasagne",
-        "type": "main course",
-        "ingredients": [
+      "id": 11,
+      "href": "https://veganuary.com/recipes/mexican-bean-lasagne/",
+      "title": "Mexican Bean Lasagne",
+      "type": "main course",
+      "ingredients": [
         "1 tablespoon oil",
         "1 onion, chopped",
         "1 green pepper, deseeded and chopped",
@@ -224,273 +235,285 @@
         "150g dairy-free cheese, grated",
         "Salt and pepper",
         "8 flour tortillas, halved"
-        ],
-        "price": 9.50,
-        "description": "A hearty and flavorful lasagne with a Mexican twist, featuring spicy beans and dairy-free cheese."
+      ],
+      "price": 9.50,
+      "description": "A hearty and flavorful lasagne with a Mexican twist, featuring spicy beans and dairy-free cheese.",
+      "points": 14
     },
     {
-        "id": 12,
-        "href": "https://veganuary.com/recipes/avocado-on-toast/",
-        "title": "Avocado on Toast",
-        "type": "breakfast",
-        "ingredients": [
+      "id": 12,
+      "href": "https://veganuary.com/recipes/avocado-on-toast/",
+      "title": "Avocado on Toast",
+      "type": "breakfast",
+      "ingredients": [
         "1 large slice of bread",
         "1 large ripe avocado",
         "Juice of 1 lemon",
         "Extra virgin olive oil",
         "Sprinkle of Japanese Nanami Togarashi or chili flakes",
         "Basil and tomatoes (to serve)"
-        ],
-        "price": 3.50,
-        "description": "Simple and delicious avocado toast, enhanced with lemon juice and chili flakes."
+      ],
+      "price": 3.50,
+      "description": "Simple and delicious avocado toast, enhanced with lemon juice and chili flakes.",
+      "points": 6
     },
     {
-        "id": 13,
-        "href": "https://veganuary.com/recipes/thai-chickpea-burgers-with-pak-choi-by-mindful-chef/",
-        "title": "Thai Chickpea Burgers with Pak Choi",
-        "type": "main course",
-        "ingredients": [
-          "1 lime",
-          "1 red chilli",
-          "240g chickpeas (drained)",
-          "2 pak choi",
-          "2 tbsp chickpea flour",
-          "2 tbsp maple syrup",
-          "2 tbsp red Thai curry paste",
-          "4 spring onions",
-          "4 tsp oil",
-          "80g brown rice"
-        ],
-        "price": 12.99,
-        "description": "Delicious Thai-inspired chickpea burgers served with pak choi and brown rice, perfect for a flavorful and healthy meal."
-      },
-      {
-        "id": 14,
-        "href": "https://veganuary.com/recipes/butternut-squash-and-sage-lasagne/",
-        "title": "Butternut Squash and Sage Lasagne",
-        "type": "main course",
-        "ingredients": [
-          "1 butternut squash",
-          "1 tsp olive oil",
-          "1 tsp maple syrup",
-          "8 sage leaves (fresh)",
-          "Black pepper",
-          "1 tsp olive oil",
-          "1 tsp cumin",
-          "1 tsp smoked paprika",
-          "½ tsp cinnamon",
-          "6 cloves garlic",
-          "1 red chilli",
-          "1 red onion",
-          "250g chestnut mushrooms",
-          "4 medium tomatoes",
-          "2 tsp red pepper/tomato puree",
-          "125 ml red wine",
-          "1 tbsp vinegar (red wine or balsamic)",
-          "Black pepper",
-          "1 tsp olive oil",
-          "3 cloves garlic",
-          "½ tsp turmeric",
-          "½ tsp cumin",
-          "1 tbsp coconut flour",
-          "125 ml non-dairy milk",
-          "350g silken firm tofu",
-          "1 tbsp lemon juice",
-          "3 tbsp nutritional yeast",
-          "1 tsp wholegrain mustard",
-          "Himalayan pink salt, to taste",
-          "250g baby spinach",
-          "2 vegan sausages (sliced into thin discs)",
-          "Handful of grated vegan cheese"
-        ],
-        "price": 15.99,
-        "description": "A hearty and comforting lasagne made with layers of butternut squash, sage, and a rich tomato and tofu sauce."
-      },
-      {
-        "id": 15,
-        "href": "https://veganuary.com/recipes/shepherds-pie/",
-        "title": "Shepherd’s Pie",
-        "type": "main course",
-        "ingredients": [
-          "8-10 potatoes (peeled)",
-          "2 medium onions",
-          "2 large carrots",
-          "10 button mushrooms",
-          "4 stalks of celery",
-          "2 garlic cloves",
-          "200g brown or green lentils (dry)",
-          "2 tbsp fresh parsley",
-          "1 tsp mixed herbs",
-          "½ - 1 tsp cinnamon",
-          "1 tbsp plain flour",
-          "1 tbsp soya butter",
-          "1 tbsp tomato puree",
-          "1 vegetable stock cube",
-          "500ml boiling water",
-          "Salt and pepper"
-        ],
-        "price": 13.49,
-        "description": "A vegan take on a classic shepherd's pie, made with lentils and topped with creamy mashed potatoes."
-      },
-      {
-        "id": 16,
-        "href": "https://veganuary.com/recipes/best-vegan-burgers/",
-        "title": "The Best Vegan Burgers",
-        "type": "main course",
-        "ingredients": [
-          "1 can black beans (rinsed and drained)",
-          "1/4 large beetroot (grated)",
-          "1 clove garlic (minced)",
-          "Salt and pepper to taste",
-          "1/2 tsp coriander",
-          "1/2 tsp cumin",
-          "1/2 tsp cayenne pepper",
-          "1 tsp chilli flakes",
-          "1 tbsp coconut oil",
-          "1 chia egg",
-          "1/4 red onion (diced finely)",
-          "1/4 cup oat flour",
-          "4 wholemeal buns",
-          "Sliced tomato",
-          "Baby spinach",
-          "Red onion (sliced into rings)",
-          "Guacamole",
-          "Ketchup"
-        ],
-        "price": 11.99,
-        "description": "Flavorful and hearty vegan burgers made with black beans and beetroot, served with fresh toppings and a wholemeal bun."
-      },
-      {
-        "id": 17,
-        "href": "https://veganuary.com/recipes/lemon-coriander-falafel/",
-        "title": "Lemon & Coriander Falafel",
-        "type": "main course",
-        "ingredients": [
-          "1 x 400g tin drained chickpeas",
-          "6 cloves garlic (crushed)",
-          "1 tbsp sea salt",
-          "1 tbsp ground pepper",
-          "50g gluten-free flour",
-          "1 lemon (zest & juice)",
-          "60g chopped coriander (cilantro)",
-          "1 red onion (finely chopped)"
-        ],
-        "price": 10.49,
-        "description": "Crispy and flavorful falafel with a refreshing lemon and coriander twist, perfect for a light meal or snack."
-      },
-      {
-        "id": 18,
-        "href": "https://veganuary.com/recipes/lazy-lahmacun/",
-        "title": "Lazy Lahmacun",
-        "type": "main course",
-        "ingredients": [
-          "1 large aubergine",
-          "1 red pepper",
-          "3 tbsp olive oil",
-          "1 small onion",
-          "5 cloves garlic (peeled and crushed)",
-          "150g mushrooms (sliced)",
-          "1 tsp ground coriander",
-          "A large pinch of ground cinnamon",
-          "½ tsp ground cumin",
-          "¹⁄³ tsp chilli powder",
-          "½ tsp sea salt",
-          "½ tsp black pepper",
-          "1 tsp dried basil",
-          "2 tomatoes (grated)",
-          "½ handful fresh flat-leaf parsley (chopped)",
-          "4 wholewheat flatbreads",
-          "Juice of ½ a lemon",
-          "1 lemon tofu feta (optional)",
-          "5 tbsp cashews (roughly chopped)"
-        ],
-        "price": 14.99,
-        "description": "A vegan version of the Turkish flatbread, topped with a flavorful mix of aubergine, red pepper, and spices."
-      },
-      {
-        "id": 19,
-        "href": "https://veganuary.com/recipes/superduper-superfoods/",
-        "title": "Superduper Superfoods",
-        "type": "breakfast",
-        "ingredients": [
-          "250 ml Provamel soya alternative to yogurt (free from sugars)",
-          "1 diced banana",
-          "1 tsp chia seeds",
-          "1 tsp goji berries (fresh or dried)",
-          "1 tbsp raisins"
-        ],
-        "price": 6.99,
-        "description": "A nutritious and energizing breakfast bowl featuring soy yogurt, banana, chia seeds, goji berries, and raisins."
-      },
-      {
-        "id": 20,
-        "href": "https://veganuary.com/recipes/nutty-chocolate-truffles/",
-        "title": "Nutty Chocolate Truffles",
-        "type": "dessert",
-        "ingredients": [
-          "¾ cup ground almonds",
-          "1 cup peanut butter (or other nut butter)",
-          "2 tbsp maple syrup or agave",
-          "12 pitted dates",
-          "¼ tsp salt",
-          "1/4 cup cocoa powder",
-          "Dark chocolate for coating"
-        ],
-        "price": 8.99,
-        "description": "Rich and decadent chocolate truffles with a nutty twist, perfect for a sweet treat."
-      },
-      {
-        "id": 21,
-        "href": "https://veganuary.com/recipes/vegan-hot-cross-buns/",
-        "title": "Hot Cross Buns",
-        "type": "dessert",
-        "ingredients": [
-          "1 tbsp ground flaxseed",
-          "300 ml plant-based milk",
-          "50 g vegan margarine",
-          "500 g strong bread flour",
-          "1 tsp salt",
-          "75 g caster sugar",
-          "1 tbsp sunflower oil",
-          "7 g sachet fast-action yeast",
-          "75 g sultanas",
-          "50 g mixed peel",
-          "Zest of 1 orange",
-          "1 apple (peeled, cored and finely chopped)",
-          "1 tsp ground cinnamon",
-          "75 g plain flour",
-          "3 tbsp apricot jam"
-        ],
-        "price": 9.99,
-        "description": "Traditional spiced buns with a vegan twist, perfect for a delightful treat during tea time or holidays."
-      },
-      {
-        "id": 22,
-        "href": "https://veganuary.com/recipes/vegan-ploughmans-lunch/",
-        "title": "Vegan Ploughman’s Lunch",
-        "type": "main course",
-        "ingredients": [
-          "Fresh bread",
-          "Cherry tomatoes on the vine",
-          "Carrots (cut into sticks)",
-          "Celery (cut into sticks)",
-          "Pickled onions",
-          "Branston Pickle",
-          "Vegan Cheddar Cheese",
-          "Cheese and Onion or Salt and Vinegar Crisps",
-          "Pate or Hummus",
-          "1 apple",
-          "1 pear"
-        ],
-        "price": 12.49,
-        "description": "A vegan version of the classic British Ploughman’s lunch, featuring fresh bread, veggies, pickles, and vegan cheese."
-      },
+      "id": 13,
+      "href": "https://veganuary.com/recipes/thai-chickpea-burgers-with-pak-choi-by-mindful-chef/",
+      "title": "Thai Chickpea Burgers with Pak Choi",
+      "type": "main course",
+      "ingredients": [
+        "1 lime",
+        "1 red chilli",
+        "240g chickpeas (drained)",
+        "2 pak choi",
+        "2 tbsp chickpea flour",
+        "2 tbsp maple syrup",
+        "2 tbsp red Thai curry paste",
+        "4 spring onions",
+        "4 tsp oil",
+        "80g brown rice"
+      ],
+      "price": 12.99,
+      "description": "Delicious Thai-inspired chickpea burgers served with pak choi and brown rice, perfect for a flavorful and healthy meal.",
+      "points": 20
+    },
     {
-        "id": 23,
-        "href": "https://veganuary.com/recipes/lentil-bolognese/",
-        "title": "Lentil Bolognese",
-        "type": "main course",
-        "ingredients": [
+      "id": 14,
+      "href": "https://veganuary.com/recipes/butternut-squash-and-sage-lasagne/",
+      "title": "Butternut Squash and Sage Lasagne",
+      "type": "main course",
+      "ingredients": [
+        "1 butternut squash",
+        "1 tsp olive oil",
+        "1 tsp maple syrup",
+        "8 sage leaves (fresh)",
+        "Black pepper",
+        "1 tsp olive oil",
+        "1 tsp cumin",
+        "1 tsp smoked paprika",
+        "½ tsp cinnamon",
+        "6 cloves garlic",
+        "1 red chilli",
+        "1 red onion",
+        "250g chestnut mushrooms",
+        "4 medium tomatoes",
+        "2 tsp red pepper/tomato puree",
+        "125 ml red wine",
+        "1 tbsp vinegar (red wine or balsamic)",
+        "Black pepper",
+        "1 tsp olive oil",
+        "3 cloves garlic",
+        "½ tsp turmeric",
+        "½ tsp cumin",
+        "1 tbsp coconut flour",
+        "125 ml non-dairy milk",
+        "350g silken firm tofu",
+        "1 tbsp lemon juice",
+        "3 tbsp nutritional yeast",
+        "1 tsp wholegrain mustard",
+        "Himalayan pink salt, to taste",
+        "250g baby spinach",
+        "2 vegan sausages (sliced into thin discs)",
+        "Handful of grated vegan cheese"
+      ],
+      "price": 15.99,
+      "description": "A hearty and comforting lasagne made with layers of butternut squash, sage, and a rich tomato and tofu sauce.",
+      "points": 16
+    },
+    {
+      "id": 15,
+      "href": "https://veganuary.com/recipes/shepherds-pie/",
+      "title": "Shepherd’s Pie",
+      "type": "main course",
+      "ingredients": [
+        "8-10 potatoes (peeled)",
+        "2 medium onions",
+        "2 large carrots",
+        "10 button mushrooms",
+        "4 stalks of celery",
+        "2 garlic cloves",
+        "200g brown or green lentils (dry)",
+        "2 tbsp fresh parsley",
+        "1 tsp mixed herbs",
+        "½ - 1 tsp cinnamon",
+        "1 tbsp plain flour",
+        "1 tbsp soya butter",
+        "1 tbsp tomato puree",
+        "1 vegetable stock cube",
+        "500ml boiling water",
+        "Salt and pepper"
+      ],
+      "price": 13.49,
+      "description": "A vegan take on a classic shepherd's pie, made with lentils and topped with creamy mashed potatoes.",
+      "points": 15
+    },
+    {
+      "id": 16,
+      "href": "https://veganuary.com/recipes/best-vegan-burgers/",
+      "title": "The Best Vegan Burgers",
+      "type": "main course",
+      "ingredients": [
+        "1 can black beans (rinsed and drained)",
+        "1/4 large beetroot (grated)",
+        "1 clove garlic (minced)",
+        "Salt and pepper to taste",
+        "1/2 tsp coriander",
+        "1/2 tsp cumin",
+        "1/2 tsp cayenne pepper",
+        "1 tsp chilli flakes",
+        "1 tbsp coconut oil",
+        "1 chia egg",
+        "1/4 red onion (diced finely)",
+        "1/4 cup oat flour",
+        "4 wholemeal buns",
+        "Sliced tomato",
+        "Baby spinach",
+        "Red onion (sliced into rings)",
+        "Guacamole",
+        "Ketchup"
+      ],
+      "price": 11.99,
+      "description": "Flavorful and hearty vegan burgers made with black beans and beetroot, served with fresh toppings and a wholemeal bun.",
+      "points": 7
+    },
+    {
+      "id": 17,
+      "href": "https://veganuary.com/recipes/lemon-coriander-falafel/",
+      "title": "Lemon & Coriander Falafel",
+      "type": "main course",
+      "ingredients": [
+        "1 x 400g tin drained chickpeas",
+        "6 cloves garlic (crushed)",
+        "1 tbsp sea salt",
+        "1 tbsp ground pepper",
+        "50g gluten-free flour",
+        "1 lemon (zest & juice)",
+        "60g chopped coriander (cilantro)",
+        "1 red onion (finely chopped)"
+      ],
+      "price": 10.49,
+      "description": "Crispy and flavorful falafel with a refreshing lemon and coriander twist, perfect for a light meal or snack.",
+      "points": 12
+    },
+    {
+      "id": 18,
+      "href": "https://veganuary.com/recipes/lazy-lahmacun/",
+      "title": "Lazy Lahmacun",
+      "type": "main course",
+      "ingredients": [
+        "1 large aubergine",
+        "1 red pepper",
+        "3 tbsp olive oil",
+        "1 small onion",
+        "5 cloves garlic (peeled and crushed)",
+        "150g mushrooms (sliced)",
+        "1 tsp ground coriander",
+        "A large pinch of ground cinnamon",
+        "½ tsp ground cumin",
+        "¹⁄³ tsp chilli powder",
+        "½ tsp sea salt",
+        "½ tsp black pepper",
+        "1 tsp dried basil",
+        "2 tomatoes (grated)",
+        "½ handful fresh flat-leaf parsley (chopped)",
+        "4 wholewheat flatbreads",
+        "Juice of ½ a lemon",
+        "1 lemon tofu feta (optional)",
+        "5 tbsp cashews (roughly chopped)"
+      ],
+      "price": 14.99,
+      "description": "A vegan version of the Turkish flatbread, topped with a flavorful mix of aubergine, red pepper, and spices.",
+      "points": 10
+    },
+    {
+      "id": 19,
+      "href": "https://veganuary.com/recipes/superduper-superfoods/",
+      "title": "Superduper Superfoods",
+      "type": "breakfast",
+      "ingredients": [
+        "250 ml Provamel soya alternative to yogurt (free from sugars)",
+        "1 diced banana",
+        "1 tsp chia seeds",
+        "1 tsp goji berries (fresh or dried)",
+        "1 tbsp raisins"
+      ],
+      "price": 6.99,
+      "description": "A nutritious and energizing breakfast bowl featuring soy yogurt, banana, chia seeds, goji berries, and raisins.",
+      "points": 8
+    },
+    {
+      "id": 20,
+      "href": "https://veganuary.com/recipes/nutty-chocolate-truffles/",
+      "title": "Nutty Chocolate Truffles",
+      "type": "dessert",
+      "ingredients": [
+        "¾ cup ground almonds",
+        "1 cup peanut butter (or other nut butter)",
+        "2 tbsp maple syrup or agave",
+        "12 pitted dates",
+        "¼ tsp salt",
+        "1/4 cup cocoa powder",
+        "Dark chocolate for coating"
+      ],
+      "price": 8.99,
+      "description": "Rich and decadent chocolate truffles with a nutty twist, perfect for a sweet treat.",
+      "points": 7
+    },
+    {
+      "id": 21,
+      "href": "https://veganuary.com/recipes/vegan-hot-cross-buns/",
+      "title": "Hot Cross Buns",
+      "type": "dessert",
+      "ingredients": [
+        "1 tbsp ground flaxseed",
+        "300 ml plant-based milk",
+        "50 g vegan margarine",
+        "500 g strong bread flour",
+        "1 tsp salt",
+        "75 g caster sugar",
+        "1 tbsp sunflower oil",
+        "7 g sachet fast-action yeast",
+        "75 g sultanas",
+        "50 g mixed peel",
+        "Zest of 1 orange",
+        "1 apple (peeled, cored and finely chopped)",
+        "1 tsp ground cinnamon",
+        "75 g plain flour",
+        "3 tbsp apricot jam"
+      ],
+      "price": 9.99,
+      "description": "Traditional spiced buns with a vegan twist, perfect for a delightful treat during tea time or holidays.",
+      "points": 18
+    },
+    {
+      "id": 22,
+      "href": "https://veganuary.com/recipes/vegan-ploughmans-lunch/",
+      "title": "Vegan Ploughman’s Lunch",
+      "type": "main course",
+      "ingredients": [
+        "Fresh bread",
+        "Cherry tomatoes on the vine",
+        "Carrots (cut into sticks)",
+        "Celery (cut into sticks)",
+        "Pickled onions",
+        "Branston Pickle",
+        "Vegan Cheddar Cheese",
+        "Cheese and Onion or Salt and Vinegar Crisps",
+        "Pate or Hummus",
+        "1 apple",
+        "1 pear"
+      ],
+      "price": 12.49,
+      "description": "A vegan version of the classic British Ploughman’s lunch, featuring fresh bread, veggies, pickles, and vegan cheese.",
+      "points": 13
+    },
+    {
+      "id": 23,
+      "href": "https://veganuary.com/recipes/lentil-bolognese/",
+      "title": "Lentil Bolognese",
+      "type": "main course",
+      "ingredients": [
         "1 large onion",
         "3 cloves of garlic",
         "Half a teaspoon (each) of dried thyme, basil and oregano",
@@ -502,16 +525,17 @@
         "Can of chopped tomatoes",
         "1 x generous teaspoon of Bouillon",
         "Half a pack of your favourite pasta"
-        ],
-        "price": 12.99,
-        "description": "A hearty and flavorful lentil-based alternative to traditional Bolognese sauce, served over pasta."
+      ],
+      "price": 12.99,
+      "description": "A hearty and flavorful lentil-based alternative to traditional Bolognese sauce, served over pasta.",
+      "points": 15
     },
     {
-        "id": 24,
-        "href": "https://veganuary.com/recipes/courgette-potato-sujebi-pulled-noodles/",
-        "title": "Courgette and Potato Sujebi (pulled noodles)",
-        "type": "main course",
-        "ingredients": [
+      "id": 24,
+      "href": "https://veganuary.com/recipes/courgette-potato-sujebi-pulled-noodles/",
+      "title": "Courgette and Potato Sujebi (pulled noodles)",
+      "type": "main course",
+      "ingredients": [
         "½ Courgette",
         "2 Potatoes",
         "200g Flour",
@@ -524,16 +548,17 @@
         "A pinch of salt",
         "Naturally Brewed Soy Sauce",
         "Sesame Seeds"
-        ],
-        "price": 11.99,
-        "description": "A comforting Korean-inspired dish featuring hand-pulled noodles with a flavorful vegetable stock and a variety of fresh vegetables."
+      ],
+      "price": 11.99,
+      "description": "A comforting Korean-inspired dish featuring hand-pulled noodles with a flavorful vegetable stock and a variety of fresh vegetables.",
+      "points": 10
     },
     {
-        "id": 25,
-        "href": "https://veganuary.com/recipes/chocolate-fudge-cake/",
-        "title": "Chocolate Fudge Cake",
-        "type": "dessert",
-        "ingredients": [
+      "id": 25,
+      "href": "https://veganuary.com/recipes/chocolate-fudge-cake/",
+      "title": "Chocolate Fudge Cake",
+      "type": "dessert",
+      "ingredients": [
         "260g self-raising flour",
         "40g cocoa powder",
         "2 teaspoons of baking powder",
@@ -543,16 +568,17 @@
         "200g plain, dairy-free chocolate (70% or more)",
         "400ml sweetened soya milk (I used the blue Vive Soy as it has a beautiful vanilla flavour to it)",
         "1 tablespoon of vanilla extract"
-        ],
-        "price": 14.99,
-        "description": "Indulge in this rich and decadent chocolate fudge cake made with dairy-free ingredients for a guilt-free treat."
+      ],
+      "price": 14.99,
+      "description": "Indulge in this rich and decadent chocolate fudge cake made with dairy-free ingredients for a guilt-free treat.",
+      "points": 15
     },
     {
-        "id": 26,
-        "href": "https://veganuary.com/recipes/superfood-salad/",
-        "title": "Superfood Salad",
-        "type": "salad",
-        "ingredients": [
+      "id": 26,
+      "href": "https://veganuary.com/recipes/superfood-salad/",
+      "title": "Superfood Salad",
+      "type": "salad",
+      "ingredients": [
         "200g (1 cup + 2 Tbsp) white quinoa",
         "400g sweet potato (about 1 sweet potato)",
         "200g (3 cups) kale leaves, stems removed",
@@ -563,16 +589,17 @@
         "1 tablespoon yuzu juice (lime juice is an alternative)",
         "2 tablespoons extra virgin olive oil",
         "2 teaspoons tamari"
-        ],
-        "price": 10.99,
-        "description": "A nutrient-packed salad featuring quinoa, sweet potato, kale, and a variety of seeds, tossed in a tangy yuzu dressing."
+      ],
+      "price": 10.99,
+      "description": "A nutrient-packed salad featuring quinoa, sweet potato, kale, and a variety of seeds, tossed in a tangy yuzu dressing.",
+      "points": 11
     },
     {
-        "id": 27,
-        "href": "https://veganuary.com/recipes/orange-and-ginger-cupcakes/",
-        "title": "Orange and Ginger Cupcakes",
-        "type": "dessert",
-        "ingredients": [
+      "id": 27,
+      "href": "https://veganuary.com/recipes/orange-and-ginger-cupcakes/",
+      "title": "Orange and Ginger Cupcakes",
+      "type": "dessert",
+      "ingredients": [
         "50 ml soya milk",
         "zest and juice of 1 orange",
         "75 g Flora Freedom",
@@ -583,16 +610,17 @@
         "2 pieces stem ginger in syrup, drained and finely chopped",
         "225 g icing sugar",
         "sliced stem ginger in syrup, optional, to decorate"
-        ],
-        "price": 9.99,
-        "description": "Enjoy the delightful combination of orange and ginger in these fluffy vegan cupcakes, topped with a zesty icing."
+      ],
+      "price": 9.99,
+      "description": "Enjoy the delightful combination of orange and ginger in these fluffy vegan cupcakes, topped with a zesty icing.",
+      "points": 10
     },
     {
-        "id": 28,
-        "href": "https://veganuary.com/recipes/lemon-tart/",
-        "title": "Lemon Tart",
-        "type": "dessert",
-        "ingredients": [
+      "id": 28,
+      "href": "https://veganuary.com/recipes/lemon-tart/",
+      "title": "Lemon Tart",
+      "type": "dessert",
+      "ingredients": [
         "For lemon pastry:",
         "230g/8oz Gluten Free Plain Flour",
         "60g/2oz dairy-free margarine – Pure Sunflower Spread",
@@ -609,16 +637,17 @@
         "3 tbsp cornflour",
         "The zest of 2 lemons",
         "60ml oat cream"
-        ],
-        "price": 13.99,
-        "description": "A zesty and tangy lemon tart with a gluten-free pastry crust, perfect for dessert lovers."
+      ],
+      "price": 13.99,
+      "description": "A zesty and tangy lemon tart with a gluten-free pastry crust, perfect for dessert lovers.",
+      "points": 14
     },
     {
-        "id": 29,
-        "href": "https://veganuary.com/recipes/roasted-pumpkin-macaroni/",
-        "title": "Roasted Pumpkin Macaroni",
-        "type": "main course",
-        "ingredients": [
+      "id": 29,
+      "href": "https://veganuary.com/recipes/roasted-pumpkin-macaroni/",
+      "title": "Roasted Pumpkin Macaroni",
+      "type": "main course",
+      "ingredients": [
         "1 butternut squash (around 1 kg)",
         "2 tbsp lemon juice",
         "75g grated vegan parmesan (or 15g Nutritional yeast flakes)",
@@ -631,9 +660,9 @@
         "100g hazelnuts, roughly chopped",
         "400g macaroni",
         "Salt and pepper"
-        ],
-        "price": 12.49,
-        "description": "A creamy and comforting macaroni dish featuring roasted pumpkin and a flavorful vegan cheese sauce."
+      ],
+      "price": 12.49,
+      "description": "A creamy and comforting macaroni dish featuring roasted pumpkin and a flavorful vegan cheese sauce.",
+      "points": 12
     }
-    
 ]

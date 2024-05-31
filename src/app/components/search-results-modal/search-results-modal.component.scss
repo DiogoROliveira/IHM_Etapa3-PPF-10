@@ -45,3 +45,8 @@ ion-list {
 .header {
   --background: white;
 }
+
+ion-item:last-child {
+  --border-width: 0;
+  --border-color: transparent;
+}

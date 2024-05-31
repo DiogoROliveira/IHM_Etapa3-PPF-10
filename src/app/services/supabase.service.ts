@@ -115,6 +115,21 @@ export class SupabaseService {
     await this.supabaseClient.from('reviews').delete().eq('id', id);
   }
 
+  async getOrdersByEmail(email: string): Promise<any[]> {
+    const { data, error } = await this.supabaseClient
+      .from('carts')
+      .select('*')
+      .eq('user_id', email)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('Error fetching recent orders:', error);
+      return [];
+    }
+
+    return data;
+  }
+
   async saveCart(userId: string, cartItems: any[], totalPrice: number) {
     const pointsEarned = this.calculatePoints(totalPrice);
     const { data, error } = await this.supabaseClient
@@ -122,6 +137,17 @@ export class SupabaseService {
       .insert([{ user_id: userId, items: cartItems, total_price: totalPrice, points_earned: pointsEarned }]);
     if (error) throw error;
     return data;
+  }
+
+  async deductPoints(userId: string, cartItems: any[], pointsToDeduct: number) {
+    const { data, error } = await this.supabaseClient
+      .from('carts')
+      .insert([{ user_id: userId, items: cartItems, total_price: 0, points_earned: -pointsToDeduct }]);
+
+    if (error) {
+      console.error('Error deducting points:', error);
+      throw error;
+    }
   }
 
   calculatePoints(totalPrice: number): number {

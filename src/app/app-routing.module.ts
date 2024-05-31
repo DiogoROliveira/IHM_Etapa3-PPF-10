@@ -41,6 +41,26 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'invite-friends',
+    loadChildren: () => import('./invite-friends/invite-friends.module').then( m => m.InviteFriendsPageModule)
+  },
+  {
+    path: 'faqs',
+    loadChildren: () => import('./faqs/faqs.module').then( m => m.FaqsPageModule)
+  },
+  {
+    path: 'points',
+    loadChildren: () => import('./points/points.module').then( m => m.PointsPageModule)
+  },
+  {
+    path: 'points-dish/:id',
+    loadChildren: () => import('./points-dish/points-dish.module').then( m => m.PointsDishPageModule)
+  },
+  {
+    path: 'points-cart',
+    loadChildren: () => import('./points-cart/points-cart.module').then( m => m.PointsCartPageModule)
+  },
 ];
 
 @NgModule({

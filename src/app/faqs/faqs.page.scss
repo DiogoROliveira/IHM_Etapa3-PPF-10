@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+  
+.logo {
+    width: auto; 
+    height: 100px;
+    transform: translateX(-30px);
+}
+  
+.back-button {
+    transform: translate(-100px, 20px);
+    color: black;
+    width: 40px; 
+    height: 40px; 
+}
+
+.header-text {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 30px;
+}
+
+.faq-question{
+    font-family: Kanit, sans-serif;
+    color: gray;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq-answer{
+    font-family: Kanit, sans-serif;
+    color: gray;
+    font-size: 16px;
+}
+
+.divider {
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}

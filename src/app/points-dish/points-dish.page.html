@@ -1,0 +1,137 @@
+<ion-content [fullscreen]="true" class="background">
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/points" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <div *ngIf="dish" class="dish-container">
+    <img [src]="'../../assets/resources/dishes/' + dish.id + '.png'" alt="{{ dish.title }}" class="dish-image">
+    <ion-text class="dish-title">
+      {{ dish.title }}
+    </ion-text>
+    <ion-text class="dish-price price">
+      {{ dish.points }} Points
+    </ion-text>
+    <ion-text class="dish-description">
+      {{ dish.description }}
+    </ion-text>
+
+    <ion-text class="ingredients" (click)="viewIngredient(true)">View Ingredients</ion-text>
+    <ion-label class="dish-customizations-label">Special Instructions</ion-label>
+    <ion-item class="dish-customizations">
+      <ion-textarea [(ngModel)]="customizations" placeholder="Enter any special requests"></ion-textarea>
+    </ion-item>
+
+    <div class="quantity-container">
+      <ion-button (click)="decreaseQuantity()" [disabled]="quantity <= 1" size="small" class="quantity-button">-</ion-button>
+      <ion-input type="number" [(ngModel)]="quantity" min="1" readonly class="quantity-input"></ion-input>
+      <ion-button (click)="increaseQuantity()" size="small" class="quantity-button">+</ion-button>
+    </div>
+
+    <ion-item class="dish-portion">
+      <ion-label>Size:</ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="selectedSize">
+        <ion-select-option value="small">Small</ion-select-option>
+        <ion-select-option value="medium">Medium</ion-select-option>
+        <ion-select-option value="large">Large</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-text class="dish-price">
+      <p>Total Points: {{ dish.points * quantity }}</p>
+    </ion-text>
+
+    <ion-button (click)="addToCart()" class="submit-button">Add to Cart</ion-button>
+
+    <hr class="divider">
+
+    <!-- Reviews Section -->
+    <ion-text class="review-title">Reviews</ion-text>
+
+    <ion-text class="review-avg">Avg. Rating: {{ averageRating | number:'1.1-1' }}</ion-text>
+
+    <ion-list *ngIf="reviews && reviews.length > 0" class="reviews-list">
+      <ion-item *ngFor="let review of reviews" class="review-item">
+        <ion-label class="review-item">
+          <h2>{{ review.username }}</h2>
+          <p>{{ review.comment }}</p>
+          <p>Rating: {{ review.rating }} / 5</p>
+          <p>Date: {{ review.date | date:'short' }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-item *ngIf="!reviews || reviews.length === 0" class="review-item">
+      <ion-label class="review-text">No reviews yet. Be the first to review!</ion-label>
+    </ion-item>
+  </div>
+
+  <ion-button (click)="openReviewModal()" class="submit-review">Add Review</ion-button>
+
+  <!-- Add Review Modal -->
+  <ion-modal [isOpen]="isReviewModalOpen">
+    <ng-template>
+      <ion-content class="background ion-padding">
+        
+        <img src="../../assets/resources/arrow-back-outline.svg" (click)="closeReviewModal()" class="review-back-button">
+        
+        <div class="review-container">
+        <form [formGroup]="reviewForm" (ngSubmit)="submitReview()">
+          <ion-text class="review-header">
+            <h1>Make a review!</h1>
+          </ion-text>
+
+          <img src="../../assets/resources/review.png" alt="review" class="review-image">
+
+          <ion-label class="review-text">Comment:</ion-label>
+          
+          <ion-textarea placeholder="Enter your review here" formControlName="comment" style="text-indent: 10px; border: 3px solid black; border-radius: 5px; width: 90%; height: 150px; transform: translateX(15px); color:gray; font-family: Kanit, sans-serif; font-size: 16px"></ion-textarea>
+          
+          <ion-label class="review-text">Rating:</ion-label>
+          <ion-select formControlName="rating" interface="action-sheet" class="review-select">
+            <ion-select-option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</ion-select-option>
+          </ion-select>
+          
+          <ion-button type="submit" expand="full" [disabled]="!reviewForm.valid" class="submit-review">Submit Review</ion-button>
+        </form>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- Ingredients Modal --> 
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ingredients</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="viewIngredient(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="background ion-padding">
+        <ion-list *ngIf="dish?.ingredients" class="modal-content">
+          <ion-item *ngFor="let ingredient of dish.ingredients" class="ingredient"> - {{ ingredient }}</ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" class="background">
+        <ion-tab-button [routerLink]="['/points']">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-label>Points</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/points-cart']">
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

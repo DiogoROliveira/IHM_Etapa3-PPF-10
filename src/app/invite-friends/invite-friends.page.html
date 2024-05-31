@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true" class="background">
+  
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/profile" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <img src="../../assets/resources/referral.png" alt="Referral Image" class="referral-image">
+
+  <ion-text class="ref-text">
+    <h1>Referral Code</h1>
+  </ion-text>
+
+  <ion-input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" class="ref-code"></ion-input>
+
+  <ion-button class="invite-button" (click)="showActionSheet()">
+    Invite Friends
+  </ion-button>
+
+</ion-content>

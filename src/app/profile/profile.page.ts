@@ -10,8 +10,11 @@ import { Storage } from '@ionic/storage-angular';
 export class ProfilePage implements OnInit {
 
   user: string = '';
+  recentOrders: any[] = [];
 
-  constructor(private storage: Storage, private navCtrl: NavController) { }
+  constructor(
+    private storage: Storage, 
+    private navCtrl: NavController  ) {}
 
   async ngOnInit() {
     await this.storage.create();
@@ -27,10 +30,24 @@ export class ProfilePage implements OnInit {
       this.user = 'Guest';
     }
   }
+    
 
   async signOut() {
     await this.storage.remove('currentUserEmail');
     await this.navCtrl.navigateRoot('/login');
   }
 
+  goToPoints(){
+    this.navCtrl.navigateForward('/points');
+  }
+
+  goToInvite(){
+    this.navCtrl.navigateForward('/invite-friends');
+  }
+
+  goToFAQ(){
+    this.navCtrl.navigateForward('/faqs');
+  }
+
 }
+

@@ -29,6 +29,8 @@
       </ion-item>
     </ion-list>
 
+    <hr *ngIf="cartItems.length > 0">
+
     <div *ngIf="cartItems.length > 0" class="price-row">
       <ion-label class="points-earned">
         Points earned:

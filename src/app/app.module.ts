@@ -9,9 +9,10 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { SearchResultsModalComponent } from './components/search-results-modal/search-results-modal.component';
 import { PaymentModalComponent } from './components/payment-modal/payment-modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddressModalComponent } from './components/address-modal/address-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchResultsModalComponent, PaymentModalComponent],
+  declarations: [AppComponent, SearchResultsModalComponent, PaymentModalComponent, AddressModalComponent],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
