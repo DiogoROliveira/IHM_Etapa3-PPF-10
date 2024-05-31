@@ -1,36 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Checkout</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true" class="background ion-padding">
+  
+
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/cart" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+  
+  <h1 class="header-text">Shipping Address</h1>
+
+  <h2 class="address-text">Enter your shipping address:</h2>
+  
   <form (ngSubmit)="submitAddress()" [formGroup]="addressForm">
-    <ion-item>
-      <ion-label position="floating">Street</ion-label>
-      <ion-input formControlName="street"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">City</ion-label>
-      <ion-input formControlName="city"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Postal Code</ion-label>
-      <ion-input formControlName="postalCode"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Country</ion-label>
-      <ion-input formControlName="country"></ion-input>
-    </ion-item>
-    <ion-button type="submit" expand="full" [disabled]="!addressForm.valid">Proceed to Payment</ion-button>
+    
+    <ion-input 
+      type="text"
+      placeholder="Enter street"
+      label="Street"
+      label-placement="floating"
+      class="address-input"
+      formControlName="street">
+    </ion-input>
+    
+    <ion-input
+      type="text"
+      placeholder="Enter city"
+      label="City"
+      label-placement="floating"
+      class="address-input"
+      formControlName="city">
+    </ion-input>
+
+    <ion-input
+      type="text"
+      placeholder="Enter postal code"
+      label="Postal Code"
+      label-placement="floating"
+      formControlName="postalCode"
+      class="address-input">
+    </ion-input>
+    
+    <ion-input 
+      label="Country" 
+      placeholder="Enter country" 
+      label-placement="floating" 
+      type="text" 
+      formControlName="country" 
+      class="address-input">
+    </ion-input>
+    
+    <ion-button type="submit" [disabled]="!addressForm.valid" class="submit-button">Proceed to Payment</ion-button>
   </form>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-button expand="full" (click)="openPaymentModal($event)" [disabled]="!addressForm.valid">Proceed to Payment</ion-button>
-  </ion-toolbar>
-</ion-footer>
 
 
 

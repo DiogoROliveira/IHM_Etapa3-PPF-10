@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { SupabaseService } from './supabase.service';
 import { Storage } from '@ionic/storage-angular';
@@ -6,7 +6,7 @@ import { Storage } from '@ionic/storage-angular';
 @Injectable({
   providedIn: 'root'
 })
-export class CartService implements OnInit{
+export class CartService {
   private cartItems = new BehaviorSubject<any[]>([]);
   currentCartItems = this.cartItems.asObservable();
   currentUser: string = '';
@@ -31,6 +31,11 @@ export class CartService implements OnInit{
     }
   }
 
+  async getCurrentUser() {
+    await this.ngOnInit();
+    return this.currentUser;
+  }
+
   addToCart(item: any) {
     const currentItems = this.cartItems.getValue();
     currentItems.push(item);
@@ -42,7 +47,6 @@ export class CartService implements OnInit{
     try {
       const totalPrice = this.getTotalPrice(cartItems);
       console.log('Saving cart to database with total price:', totalPrice);
-      await this.supabaseService.saveCart(this.currentUser, cartItems, totalPrice);
     } catch (error) {
       console.error('Erro ao salvar carrinho no banco de dados:', error);
     }

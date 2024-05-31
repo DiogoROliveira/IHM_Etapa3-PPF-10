@@ -1,22 +1,17 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Review } from './review';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SupabaseService implements OnInit{
-
+export class SupabaseService {
   private supabaseUrl = 'https://rgarrzqqqpoxzndreqrj.supabase.co';
   private supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJnYXJyenFxcXBveHpuZHJlcXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTcwNzg2MTgsImV4cCI6MjAzMjY1NDYxOH0.3zM_Ly0Y-WGsmccotYeWGA6Yht7Ja7zxM0uYF9iK0RM';
   private supabaseClient: SupabaseClient;
   
   constructor() {
     this.supabaseClient = createClient(this.supabaseUrl, this.supabaseKey);
-  }
-
-  ngOnInit() {
-    this.signIn('diogo.rosas.oliveira@ipvc.pt', 'projetofinalIHM2024.');
   }
 
   async signUp(email: string, password: string): Promise<void> {
@@ -29,7 +24,6 @@ export class SupabaseService implements OnInit{
       throw error;
     }
   }
-  
 
   async signIn(email: string, password: string): Promise<void> {
     const { data, error } = await this.supabaseClient.auth.signInWithPassword({
@@ -134,6 +128,4 @@ export class SupabaseService implements OnInit{
     // Example: 1 point per 10 EUR spent
     return Math.floor(totalPrice / 10);
   }
-
-
 }
