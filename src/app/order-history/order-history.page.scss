@@ -1,0 +1,94 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+  
+.logo {
+    width: auto; 
+    height: 100px;
+    transform: translateX(-25px);
+}
+  
+.back-button {
+    transform: translate(-100px, 20px);
+    color: black;
+    width: 40px; 
+    height: 40px; 
+}
+
+.header-text {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 30px;
+}
+
+ion-list {
+    --background: transparent;
+    background-color: transparent;
+    background: transparent;
+}
+
+ion-item {
+    --background: transparent;
+    background-color: transparent;
+    background: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dish-image {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    border-color: gray;
+    border-style: solid;
+}
+
+.dish-title {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 20px;
+}
+
+.dish-quantity {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 14px;
+}
+
+.dish-price {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 14px;
+}
+
+.dish-date {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 14px;
+}
+
+.order-history-text {
+    color: gray;
+    font-family: Kanit, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.header-line {
+    border-bottom: 1px solid gray;
+}
+
+.new-order-button {
+    --background: gray;
+    --color: white;
+    border-radius: 30px;
+    width: 75%;
+    height: 40px;
+    font-family: Kanit, sans-serif;
+    font-size: 20px;
+    transform: translate(40px, 60px);
+}

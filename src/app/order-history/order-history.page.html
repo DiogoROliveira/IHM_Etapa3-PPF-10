@@ -1,0 +1,28 @@
+<ion-content class="background ion-padding">
+  <div class="header">
+    <img src="../../assets/resources/arrow-back-outline.svg" routerLink="/profile" class="back-button">
+    <img src="../../assets/resources/logo-removebg.png" alt="logo" class="logo">
+  </div>
+
+  <h1 class="header-text">Order History</h1>
+  <hr class="header-line">
+
+  <h2 class="order-history-text" *ngIf="orderHistory.length == 0">No orders found</h2>
+  <ion-button routerLink="/home" *ngIf="orderHistory.length == 0" class="new-order-button">See our menu!</ion-button>
+
+
+  <ion-list>
+    <ion-item *ngFor="let order of orderHistory">
+      <ion-thumbnail slot="start" *ngIf="order.items?.length && order.items[0]?.dish" class="dish-image">
+        <img [src]="getImageUrl(order.items[0].dish.id)" alt="Dish Image">
+      </ion-thumbnail>
+      <ion-label *ngIf="order.items?.length && order.items[0]?.dish">
+        <h2 class="dish-title">{{ order.items[0].dish.title }}</h2>
+        <p class="dish-quantity">Quantity: {{ order.items[0].quantity }}</p>
+        <p class="dish-price">Price: {{ order.total_price | currency: 'EUR' }}</p>
+        <p class="dish-date">Date: {{ formatDate(order.created_at) }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

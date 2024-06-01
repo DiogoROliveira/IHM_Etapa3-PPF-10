@@ -61,6 +61,10 @@ const routes: Routes = [
     path: 'points-cart',
     loadChildren: () => import('./points-cart/points-cart.module').then( m => m.PointsCartPageModule)
   },
+  {
+    path: 'order-history',
+    loadChildren: () => import('./order-history/order-history.module').then( m => m.OrderHistoryPageModule)
+  },
 ];
 
 @NgModule({

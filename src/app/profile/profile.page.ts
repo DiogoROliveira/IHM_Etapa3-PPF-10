@@ -49,5 +49,9 @@ export class ProfilePage implements OnInit {
     this.navCtrl.navigateForward('/faqs');
   }
 
+  goToOrderHistory(){
+    this.navCtrl.navigateForward('/order-history');
+  }
+
 }
 
