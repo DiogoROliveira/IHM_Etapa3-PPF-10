@@ -11,3 +11,43 @@ adquiridas, possíveis de usar em futuras compras.
 ## Protótipos de Alta-Fidelidade
 
 [Protótipos Figma](https://www.figma.com/design/zKGRD2sP2QaIVcZ8E4bI4H/VegeTal?node-id=0-1&t=eyBOpn9CgYhsSnQY-1)
+
+<hr>
+
+# Como Experimentar a Aplicação
+
+## Instruções de Instalação
+
+**Instalar Pacotes Necessários**
+
+* Instalar [Node.js](https://nodejs.org/en) <br>
+&emsp;> Versão a instalar:  
+&emsp;> XX.XX.X LTS (atualmente, 20.11.1)  
+&emsp;> Recommended For Most Users <br><br>
+* Instalar o Ionic (Ionic CLI): <br><br>
+  ```
+  npm install -g @ionic/cli
+  ```
+
+**Copiar este repositório para um diretório local**
+
+* Git Clone<br>
+
+    ```
+    git clone https://github.com/DiogoROliveira/Etapa3-PPF-10.git
+    ```
+
+**Navegar até ao diretório do projeto**
+```
+cd Etapa3-PPF-10
+```
+
+**Correr Projeto**
+
+No terminal, introduzir o seguinte comando:
+```
+ionic serve
+```
+
+
+
