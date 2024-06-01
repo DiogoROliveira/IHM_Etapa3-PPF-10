@@ -6,6 +6,7 @@
   </div>
 
   <h1 class="header-text">Your Points: {{ points }}</h1>
+  <ion-spinner *ngIf="loadingPoints"></ion-spinner> <!-- Spinner de carregamento -->
 
   <hr class="divider">
 
