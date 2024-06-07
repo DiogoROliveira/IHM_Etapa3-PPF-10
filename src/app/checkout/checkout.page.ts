@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { PaymentModalComponent } from '../components/payment-modal/payment-modal.component';
+
+// Lista de países válidos
+const validCountries = ["Portugal", "Spain", "France", "Germany", "Italy", "United Kingdom"];
 
 @Component({
   selector: 'app-checkout',
@@ -18,9 +21,26 @@ export class CheckoutPage {
     this.addressForm = this.formBuilder.group({
       street: ['', Validators.required],
       city: ['', Validators.required],
-      postalCode: ['', Validators.required],
-      country: ['', Validators.required]
+      postalCode: ['', [Validators.required, this.postalCodeValidator()]],
+      country: ['', [Validators.required, this.countryValidator()]]
     });
+  }
+
+  // Validador customizado para o país
+  countryValidator(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const isValid = validCountries.includes(control.value);
+      return isValid ? null : { invalidCountry: { value: control.value } };
+    };
+  }
+
+  // Validador customizado para o código postal
+  postalCodeValidator(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const regex = /^[0-9]{4}-[0-9]{3}$/; // Exemplo de formato de código postal português
+      const isValid = regex.test(control.value);
+      return isValid ? null : { invalidPostalCode: { value: control.value } };
+    };
   }
 
   async submitAddress() {

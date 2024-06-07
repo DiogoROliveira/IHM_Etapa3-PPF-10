@@ -27,5 +27,6 @@
     </ion-radio-group>
   </ion-list>
   </div>
-  <ion-button class="payment-button" (click)="confirmPayment()">Confirm Payment</ion-button>
+  <ion-button class="payment-button" [disabled]="!selectedPaymentMethod" (click)="confirmPayment()">Confirm Payment</ion-button>
 </ion-content>
+

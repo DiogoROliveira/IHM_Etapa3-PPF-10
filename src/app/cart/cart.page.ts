@@ -42,8 +42,29 @@ export class CartPage implements OnInit {
   }
 
   // Clear the cart by calling the clearCart method of the cart service
-  clearCart() {
-    this.cartService.clearCart();
+  async clearCart() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Confirm Clear Cart',
+      buttons: [
+        {
+          text: 'Clear',
+          role: 'destructive',
+          icon: 'trash',
+          handler: () => {
+            this.cartService.clearCart();
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          icon: 'close',
+          handler: () => {
+            // Action cancelled
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
   }
 
   // Calculate the number of points by dividing the total price by 10 and rounding down
