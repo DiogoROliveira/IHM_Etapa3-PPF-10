@@ -50,3 +50,11 @@ ion-item:last-child {
   --border-width: 0;
   --border-color: transparent;
 }
+
+.no-results {
+  text-align: center;
+  margin-top: 20px;
+  color: gray; 
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+}

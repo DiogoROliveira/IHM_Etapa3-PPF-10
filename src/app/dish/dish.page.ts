@@ -25,6 +25,12 @@ export class DishPage implements OnInit {
   isReviewModalOpen: boolean = false;
   currentUser: string = '';
 
+  sizeRatios: Record<string, number> = {
+    small: 0.75,
+    medium: 1,
+    large: 1.25
+  };
+
   constructor(
     private route: ActivatedRoute,
     private storage: Storage,
@@ -38,7 +44,7 @@ export class DishPage implements OnInit {
     this.reviewForm = this.formBuilder.group({
       rating: ['', Validators.required],
       comment: ['', Validators.required]
-    });    
+    });
   }
 
   async ngOnInit() {
@@ -57,17 +63,16 @@ export class DishPage implements OnInit {
       const email = await this.storage.get('currentUserEmail');
       if (email) {
         const userData = await this.storage.get(email);
-      if (userData && userData.name) {
-        this.currentUser = userData.name.split(' ')[0];
+        if (userData && userData.name) {
+          this.currentUser = userData.name.split(' ')[0];
+        } else {
+          this.currentUser = 'Guest';
+        }
       } else {
         this.currentUser = 'Guest';
       }
-    } else {
-      this.currentUser = 'Guest';
-    } 
     }
   }
-
 
   loadDishDetails(id: string) {
     this.dishService.getDishById(id).subscribe(
@@ -112,13 +117,19 @@ export class DishPage implements OnInit {
     this.isReviewModalOpen = false;
   }
 
+  calculateTotalPrice(): number {
+    const basePrice = this.dish.price;
+    const sizeRatio = this.sizeRatios[this.selectedSize];
+    return basePrice * sizeRatio * this.quantity;
+  }
+
   addToCart() {
-        const cartItem = {
+    const cartItem = {
       dish: this.dish,
       size: this.selectedSize,
       customizations: this.customizations,
       quantity: this.quantity,
-      totalPrice: this.dish.price * this.quantity
+      totalPrice: this.calculateTotalPrice()
     };
     this.cartService.addToCart(cartItem);
     this.router.navigate(['/cart']);
@@ -174,6 +185,6 @@ export class DishPage implements OnInit {
 
     await alert.present();
   }
-
 }
+
 

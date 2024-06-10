@@ -30,7 +30,7 @@
 
     <ion-item class="dish-portion">
       <ion-label>Size:</ion-label>
-      <ion-select interface="action-sheet" [(ngModel)]="selectedSize">
+      <ion-select interface="action-sheet" [(ngModel)]="selectedSize" (ionChange)="calculateTotalPrice()">
         <ion-select-option value="small">Small</ion-select-option>
         <ion-select-option value="medium">Medium</ion-select-option>
         <ion-select-option value="large">Large</ion-select-option>
@@ -38,7 +38,7 @@
     </ion-item>
 
     <ion-text class="dish-price">
-      <p>Total Price: {{ dish.price * quantity | currency:'EUR' }}</p>
+      <p>Total Price: {{ calculateTotalPrice() | currency:'EUR' }}</p>
     </ion-text>
 
     <ion-button (click)="addToCart()" class="submit-button">Add to Cart</ion-button>

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { SupabaseService } from './supabase.service';
 import { Storage } from '@ionic/storage-angular';
 
 @Injectable({
@@ -12,7 +11,6 @@ export class CartService {
   currentUser: string = '';
 
   constructor(
-    private supabaseService: SupabaseService,
     private storage: Storage
   ) {}
 
@@ -31,9 +29,18 @@ export class CartService {
     return this.currentUser;
   }
 
-  addToCart(item: any) {
+  addToCart(newItem: any) {
     const currentItems = this.cartItems.getValue();
-    currentItems.push(item);
+    const existingItemIndex = currentItems.findIndex(item => item.dish.id === newItem.dish.id && item.size === newItem.size);
+
+    if (existingItemIndex > -1) {
+      const existingItem = currentItems[existingItemIndex];
+      existingItem.quantity += newItem.quantity;
+      existingItem.totalPrice += newItem.totalPrice;
+    } else {
+      currentItems.push(newItem);
+    }
+
     this.cartItems.next(currentItems);
     this.saveCartToDatabase(currentItems);
   }

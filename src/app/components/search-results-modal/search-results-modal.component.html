@@ -9,14 +9,24 @@
 
 <ion-content class="background">
   <ion-list>
-    <ion-item *ngFor="let result of searchResults" (click)="openDishPage(result.id)">
-      <div class="recipe-container">
-        <img [src]="'../../assets/resources/dishes/' + result.id + '.png'" alt="{{ result.title }}" class="recipe-image">
-        <ion-text class="recipe-title">
-          <p>{{ result.title }}</p>
-        </ion-text>
-        <ion-icon name="chevron-forward-outline" slot="end" class="arrow-icon"></ion-icon>
+    <!-- Verifica se há resultados -->
+    <ng-container *ngIf="searchResults.length > 0; else noResults">
+      <ion-item *ngFor="let result of searchResults" (click)="openDishPage(result.id)">
+        <div class="recipe-container">
+          <img [src]="'../../assets/resources/dishes/' + result.id + '.png'" alt="{{ result.title }}" class="recipe-image">
+          <ion-text class="recipe-title">
+            <p>{{ result.title }}</p>
+          </ion-text>
+          <ion-icon name="chevron-forward-outline" slot="end" class="arrow-icon"></ion-icon>
+        </div>
+      </ion-item>
+    </ng-container>
+    <!-- Template alternativo caso não haja resultados -->
+    <ng-template #noResults>
+      <div class="no-results">
+        <p>No results found!</p>
       </div>
-    </ion-item>
+    </ng-template>
   </ion-list>
 </ion-content>
+
