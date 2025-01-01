@@ -6,8 +6,8 @@ import { Review } from './review';
   providedIn: 'root'
 })
 export class SupabaseService {
-  private supabaseUrl = 'https://rgarrzqqqpoxzndreqrj.supabase.co';
-  private supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJnYXJyenFxcXBveHpuZHJlcXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTcwNzg2MTgsImV4cCI6MjAzMjY1NDYxOH0.3zM_Ly0Y-WGsmccotYeWGA6Yht7Ja7zxM0uYF9iK0RM';
+  private supabaseUrl = 'hidden';
+  private supabaseKey = 'hidden';
   private supabaseClient: SupabaseClient;
   
   constructor() {
